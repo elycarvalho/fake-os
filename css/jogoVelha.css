@@ -1,0 +1,127 @@
+#container-jogo{
+	color: #000;
+	padding-top: 70px;
+	width: 100%;
+	height: 412px;
+    background-image: linear-gradient(lightblue, lightgreen);
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#container-players{
+	color: #000;
+	margin-top: 20px;
+	width: 310px;
+	height: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	border: 2px solid orange;
+	background-color: #fff;
+	border-radius: 10px;
+	font-size: 1.2rem;
+}
+
+#grade{
+	margin-top: 5px;
+	width: 320px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.caixa{
+	width: 105px;
+	height: 105px;
+	border: 3px solid darkgreen;
+}
+
+#telaInicio{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 350px;
+	height: 430px;
+    background-image: radial-gradient(#E9B219, #E96319);
+    position: absolute;
+    z-index: 1;
+    top: 70px;   
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+}
+
+#telaInicio input{
+	width: 50%;
+	height: 30px;
+	border-radius: 10px;
+	border: 1px solid #9F4513;
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+#telaInicio h2{
+    font-size: 2rem;
+    color: #009A36;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#btnComecar{
+	font-weight: bold;
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px darkblue;
+    background-color: #3483F0;
+    color: #fff;
+}
+
+#telaFim{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 350px;
+	height: 450px;
+	position: absolute;
+	top: 60px;
+	border-radius: 10px;
+	background-image: radial-gradient(#A2E53E, #599F13);
+	box-shadow: 3px 3px 3px;
+}
+
+#caixa1, #caixa2, #caixa3{
+	border-top: none;
+}
+
+#caixa1, #caixa4, #caixa7{
+	border-left: none;
+}
+
+#caixa7, #caixa8, #caixa9{
+	border-bottom: none;
+}
+
+#caixa3, #caixa6, #caixa9{
+	border-right: none;
+}
+
+#nomeVencedor{
+	font-weight: bold;
+    font-size: 1.7rem;
+}
+
+#btnReinicia{
+	width: 50%;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	background-color: #E9B219;
+	box-shadow: 2px 2px 2px darkgreen;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

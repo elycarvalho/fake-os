@@ -1,0 +1,116 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+#tela-inicial{
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+    background-image: linear-gradient(#000, #011578);
+}
+
+#logo img{
+	width: 98%;
+	height: 80vh;
+	position: relative;
+	animation-name: anima-logo;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+#barra-progresso{
+	width: 100%;
+	margin-top: 30px;
+	height: 40px;
+	background-image: linear-gradient(90deg, #479FC6, #3F8CE3);
+	position: relative;
+	animation-name: progresso;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+}
+#tela-inicial p{
+	margin-top: 50px;
+	font-family: arial;
+	font-size: 1.5rem;
+	color: #fff;
+}
+
+#tela-login{
+	background-image: url(../img/landscape.jpg);
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	animation-name: telaLogin;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	z-index: 1;  
+}
+
+#tela-login h1{
+	font-size: 1.6rem;
+	color: #fff;
+}
+
+#tela-login input{
+	text-align: center;
+	height: 28px;
+	width: 200px;
+	opacity: 80%;
+	font-size: 1.4rem;
+}
+
+#user-img{
+	margin-bottom: 15px;
+	width: 190px;
+	height: 190px;
+	border-radius: 50%;
+	opacity: 80%;
+}
+
+#user-img img{
+	border-radius: 50%;
+}
+
+#btn-entrar{
+	font-size: 1.1rem;
+	font-weight: bold;
+	background-color: #A0CEFF;
+	width: 95px;
+	height: 35px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	margin-top: 40px;
+	opacity: 80%;
+}
+
+@keyframes telaLogin{
+    0% {opacity: 0;}
+    90% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes anima-logo{
+    0% {opacity: 0.2;}
+    50%{opacity: 1;}
+    100%{opacity: 0.2;}
+}
+
+@keyframes progresso{
+	0% {width: 0.5%;}
+	50%{width: 50%;}
+	75%{width: 55%;}
+	100%{width: 60%;}
+}
+
+
+
+

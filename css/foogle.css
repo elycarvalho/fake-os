@@ -1,0 +1,84 @@
+h1 {
+	font-size: 3.5rem;
+	margin: 20px 0 25px 0;
+	color: #4586D0;
+}
+
+.letra0{
+  font-size: 4.2rem;
+}
+
+.letra1{
+	color: #EB3A2C;
+}
+
+.letra2{
+	color: #E3B82B;
+}
+
+.letra3{
+	color: #198C1A;
+}
+#topo-foogle{
+	text-align: right;
+	margin: 20px 20px 10px 0;
+}
+
+#topo-foogle img{
+	margin: 5px 0 0 20px;
+}
+#topo-foogle a{
+	color: #464646;
+	margin-left: 15px;
+}
+
+#main-foogle{
+	text-align: center;
+}
+
+#main-foogle input{
+	margin-bottom: 20px;
+	height: 30px;
+	width: 55%;
+	border-radius: 15px;
+	border: 1px solid #E0E0E0;
+	box-shadow: 1px 1px 3px #E0E0E0;
+	outline: none;
+	padding-left: 30px;
+}
+
+#btn-pesquisa, #btn-sorte{
+	border: none;
+	padding: 10px 20px;
+	margin-left: 10px;
+	font-size: 0.8rem;
+}
+
+#lupa{
+	position: relative;
+	left: 30px;
+	top: 3px;
+}
+
+#mic-google{
+	position: relative;
+	right: 30px;
+	top: 3px;
+}
+
+@media (max-width: 480px) {
+  #btn-pesquisa, #btn-sorte{
+  	padding: 10px 10px;
+  }	
+}
+
+#menu{
+	top: 310px;
+}
+
+#mostra-mensagem{
+	margin-top: 20px;
+	font-size: 1.4rem;
+	padding: 5px;
+	color: #000;
+}

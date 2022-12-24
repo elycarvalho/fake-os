@@ -1,0 +1,79 @@
+.fotos {display: none}
+.container-galeria img {
+  margin-left: 19px;
+}
+
+/* Container das fotos */
+.container-galeria {
+  background-color: #000;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Botoões de "proxima" e "anterior" */
+.ant, .prox {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 25px 5px;
+  margin-top: -30px;
+  color: lightgray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prox {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.ant:hover, .prox:hover {
+  background-color: rgba(100,100,100,0.8);
+}
+
+/* Legenda da foto */
+.texto {
+  color: gray;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Número de fotos (1/1, 2/2, etc) */
+.numeros {
+  color: gray;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+
+/* animação do escurecimento da foto */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Em telas pequenas reduzir o tamanho do texto */
+@media only screen and (max-width: 300px) {
+  .ant, .prox, .texto {font-size: 12px}
+}
+
+@media (max-width:  992px) {
+  #janela2{height: 310px;}
+}

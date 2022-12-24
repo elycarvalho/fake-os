@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: arial, sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #F5F5F5;
+}
+body{
+	background-color: #040E18;
+	overflow-x: hidden;
+}
+
+#main{
+	color: #F5F5F5;
+	background-image: url(../img/fake-logo.png),
+      url(../img/wallpaper.jpg),
+	   linear-gradient(#00A1F9, #9DCBFF);
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 2px;
+	width: 100%;
+   height: 100vh;
+	display: flex;
+}
+
+#coluna-1{
+	margin-right: 10px;
+}
+
+#toolbar {
+	color: #fff;
+	height: 35px;
+   display: flex;
+   background-color: #1B4762;
+   position: relative;
+   z-index: 1;
+}
+
+#mid-bar{
+	padding: 10px 0 0 5px;
+	margin-left: 4px;
+	margin-right: 4px;
+	width: 75%;
+}
+
+#hora{
+	padding-top: 10px;
+	text-align: center;
+	width: 60px;
+	border-right: 2px solid #3A3A3A;
+	border-left: 2px solid #3A3A3A;
+	float: right;
+}
+
+#hoje{
+	width: 100px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#dataHoraCompleta{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+   width: 150px;
+   height: 200px;
+   color: #fff;
+   background-color: #1F5676;
+   position: absolute;
+   z-index: 1;
+   bottom: 30%;
+   right: 1px;
+   border: 1px solid #012F11;
+}
+
+#diaGG{
+	border: 2px solid #1B4762;
+	padding: 5px;
+	background-color: #011B0A;
+}
+#menu{
+	padding: 5px 10px;
+	background-color:  #1F5676;
+	width: 210px;
+	height: 280px;
+	border: 1px solid #1F5676;
+	position: relative;
+	top: 300px;
+   left: -208px;
+   z-index: 1;
+}
+
+#menu ul li{
+	padding: 3px;
+	list-style: none;
+	margin: 15px 0;
+	cursor: pointer;
+}
+
+#menu ul li:hover{
+	background-color: #B6DCFF;
+}
+
+.icone{
+	text-align: center;
+	margin: 34px 10px;
+	width: 80px;
+	height: 80px;
+}
+
+.icone:hover{
+	background-color: rgba(190, 208, 250, 0.8);
+}
+
+#btn-start{
+	border: none;
+	color: #fff;
+	background-color: #1F5676;
+	width: 100px;
+	height: 35px;
+}
+
+#btn-start:hover{
+	background-color: #29729D;
+}
+
+#janela{
+	background-color: #F0EEE9;
+	width: 65%;
+	height: 500px;
+	border: 1px solid #404040;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	z-index: 1;
+}
+
+#janela2{
+	background-color: #fff;
+	width: 90%;
+	height: 510px;
+	border: 1px solid #404040;
+	position: absolute;
+	top: 40px;
+	left: 5px;
+}
+
+#topo-janela, #topo-janela2{
+	padding: 2px;
+	background-color: #22587A;
+}
+
+
+/******* configurações da tela de temas ******/
+#temas{
+	border:  2px solid #DDDCDA;
+	padding: 5px 0 5px 30px;
+}
+
+.miniatura-tema{
+	width: 135px;
+	margin: 5px;
+}
+
+#temas input[type='radio'] {
+	position: relative;
+	bottom: 50px;
+}
+
+#btn-aplicar{
+	width: 150px;
+	height: 40px;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 10px;
+}
+/**********************************************/
+#btn-fechar{
+	border: none;
+	color: #fff;
+	background-color: #9F1F1F;
+	font-weight: bold;
+	width: 30px;
+	height: 25px;
+}
+
+/******* Media queries ********/
+@media (max-width: 768px) {
+   #main{
+		background-image: url(../img/fos.png),
+		url(../img/wallpaper.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	#hoje{display: none;}
+}
+
+
+@media (max-width: 480px) {
+   #main{
+		background-image: url(../img/fos-mini.png),
+		url(../img/wallpaper.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	#janela2{
+		width: 98%;
+	}
+
+}
+
+@media (min-width: 768px) {
+	#janela{
+		width: 45%;
+	}
+	#janela2{
+		width: 50%;
+	}
+}
+
