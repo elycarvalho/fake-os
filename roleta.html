@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wheel of Misfortune</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/roleta.css">
+</head>
+<body>
+  <div id="main">
+    <div id="col-1"><!-- inicio coluna 1-->
+    	<a href="corrida.html">
+        <div class="icone">
+          <img src="img/corrida.png">
+          corrida
+        </div>
+      </a>
+      <a href="calculadora.html">
+        <div class="icone">
+          <img src="img/calculator.png">
+          Calculadora
+        </div>
+      </a>
+        <div class="icone" onclick="mostraJanela2()">
+          <img src="img/pincel.png" width="80">
+          Dot paint
+        </div>
+      <a href="jogo-velha.html">
+        <div class="icone">
+          <img src="img/velha.png">
+          Jogo da velha
+        </div>
+      </a>
+      <a href="forca.html">
+        <div class="icone">
+          <img src="img/hangman-icon.png">
+          Jogo da forca
+        </div>
+      </a>
+    </div><!--fim coluna 1-->
+
+    <div id="col-2"><!-- inicio coluna 2-->
+      <a href="cronometro.html">
+        <div class="icone">
+          <img src="img/stopwatch.png">
+          Cronômentro
+        </div>
+      </a>
+      <a href="galeria.html">
+        <div class="icone">
+          <img src="img/icone-galeria.png">
+          Imagens
+        </div>
+      </a>
+      <a href="foogle.html">
+        <div class="icone">
+          <img src="img/Foogle.png">
+          Foogle
+        </div>
+      </a>
+      <a href="terminal.html">
+        <div class="icone">
+          <img src="img/terminal.png">
+          Terminal
+        </div>
+      </a>
+      <a href="fakebook.html">
+	    <div class="icone"><!-- icone fakebook -->
+	      <img src="img/fakebook.png">
+	    </div>
+      </a>
+    </div><!--fim coluna 2-->
+
+    <div id="janela" style="display:none"><!--- inicio janela 1 --->
+      <div id="topo-janela">
+        <button id="btn-fechar" onclick="fechaJanela()">X</button>
+        <div id="titulo-janela"></div>
+      </div>
+      <div id="temas"><!-- inicio tela temas -->
+        <p>Selecione um tema:</p>
+        <input type="radio" id="temas1" name="temas" value="tema1">
+        <label for="tema1">
+          <img src="img/tema1.png" class="miniatura-tema">
+        </label><br>
+
+        <input type="radio" id="temas2" name="temas" value="tema2">
+        <label for="css">
+          <img src="img/tema2.png" class="miniatura-tema">
+        </label><br>
+
+        <input type="radio" id="temas3" name="temas" value="tema3">
+        <label for="javascript">
+          <img src="img/tema3.png" class="miniatura-tema">
+        </label>
+        <br>
+
+        <button id="btn-aplicar" onclick="aplicaTema()">Aplicar</button>
+      </div><!-- fim tela temas -->
+    </div><!--- fim janela 1 --->
+
+    <div id="janela2"><!--- inicio janela 2 --->
+      <div id="topo-janela2">
+        <button id="btn-fechar" onclick="fechaJanela2()">X</button>
+        <div id="titulo-janela2"></div>
+      </div>
+      <!---- Roleta --->
+      <div class="container-jogo">
+    <div id="tela-inicial">
+      <h1>WHEEL OF MISFORTUNE</h1>
+      <img src="img/wheel.png" width="150">
+      <h3>DIGITE OS NOMES DOS JOGADORES</h3>
+      <input id="nome1" type="text" value="Jogador 1">
+      <input id="nome2" type="text" value="jogador 2">
+      <button id="btnComecar">Começar</button>  
+    </div>
+
+    <div class="container-roleta">
+      <div id="seta"></div>
+      <div id="roleta">
+        <img src="img/roleta2.png">
+      </div>
+      <button id="btn-girar">GIRAR</button>
+    </div>
+
+    <div class="container-nomes">
+      <div id="nomePlayer1"></div>
+      <div id="nomePlayer2"></div>
+    </div>
+
+    <div class="container-jogadores">
+      <div class="painel-jogador" id="jogador1">
+      </div> 
+      <div class="painel-jogador" id="jogador2">    
+      </div>
+    </div>
+
+    <div class="container-palavra">
+      <div id="dica">dica</div>
+      <div class="caixa-palavra">
+        <div id="palavra">palavra secreta</div>
+      </div>
+    </div>
+    
+    <div class="container-chute">
+      <input type="text" id="chute">
+      <button id="btn-chutar">CHUTAR</button>
+    </div>
+  </div>
+
+  <div id="mostraTelaFinal" style="display: none;">
+    <div id="vencedor"></div>
+    <div id="pontosVencedor"></div>
+    <div id="palavraAcertada"></div>
+    <button id="btnReiniciar">REINICIAR</button>
+  </div>
+
+  <audio src="som-roleta.mp3" id="som-roleta"></audio>
+      <!--- fim roleta --->
+    </div><!--- fim janela 2 --->
+
+    <div id="menu" style="display:none">
+      <ul>
+        <li>
+          <img src="img/notepad.png" width="20px">
+          &nbsp;Fake note
+        </li>
+        <li>
+          <img src="img/pincel.png" width="20px">
+          &nbsp;Dot paint
+        </li>
+        <li>
+          <img src="img/calculator.png" width="20px">
+          &nbsp;Calculadora
+        </li>
+        <li id="menu-terminal">
+          <img src="img/terminal.png" width="20px">
+          &nbsp;Terminal
+        </li>
+        <li onclick="iniciaTemas()">
+          <img src="img/config.png" width="20px">
+          &nbsp;Temas
+        </li>
+        <a href="desligar.html">
+          <li>
+            <img src="img/desligar.png" width="20px">
+            &nbsp;Desligar
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div> 
+  
+  <div id="toolbar">
+  	<button onclick="startMenu()" id="btn-start">Menu
+    </button>
+  	
+  	<div id="mid-bar">
+      <div id="btn-janela" style="display:none"></div>
+  	</div>
+
+  	<div id="hora"></div>
+    <div id="hoje"></div>
+  </div>
+
+  <div id="dataHoraCompleta" style="display: none;">
+    <div id="horaCompleta"></div>
+    <div id="diaSemana"></div>
+    <div id="diaGG"></div>
+    <div id="nomeMes"></div>
+    <div id="ano"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/roleta.js"></script>
+</body>
+</html>
+	

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jogo da forca</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/forca.css">
+</head>
+<body>
+  <div id="main">
+    <div id="col-1"><!-- inicio coluna 1-->
+      <a href="corrida.html">
+      	<div class="icone">
+          <img src="img/corrida.png">
+          Corrida
+        </div>
+      </a>
+      <a href="calculadora.html">
+        <div class="icone">
+          <img src="img/calculator.png">
+          Calculadora
+        </div>
+      </a>
+      <a href="dot-paint.html">
+        <div class="icone">
+          <img src="img/pincel.png" width="80">
+          Dot paint
+        </div>
+      </a>
+      <a href="jogo-velha.html">
+        <div class="icone">
+          <img src="img/velha.png">
+          Jogo da velha
+        </div>
+      </a>
+  
+        <div class="icone" onclick="mostraJanela2()">
+          <img src="img/hangman-icon.png">
+          Jogo da forca
+        </div>
+
+    </div><!--fim coluna 1-->
+
+    <div id="col-2"><!-- inicio coluna 2-->
+      <a href="cronometro.html">
+        <div class="icone">
+          <img src="img/stopwatch.png">
+          Cronômentro
+        </div>
+      </a>
+      <a href="galeria.html">
+        <div class="icone">
+          <img src="img/icone-galeria.png">
+          Imagens
+        </div>
+      </a>
+      <a href="foogle.html">
+        <div class="icone">
+          <img src="img/Foogle.png">
+          Foogle
+        </div>
+      </a>
+      <a href="terminal.html">
+        <div class="icone">
+          <img src="img/terminal.png">
+          Terminal
+        </div>
+      </a>
+      <a href="fakebook.html">
+        <div class="icone"><!-- icone fakebook -->
+          <img src="img/fakebook.png">
+        </div>
+      </a>
+    </div><!--fim coluna 2-->
+
+    <div id="janela" style="display:none"><!--- inicio janela 1 --->
+      <div id="topo-janela">
+        <button id="btn-fechar" onclick="fechaJanela()">X</button>
+        <div id="titulo-janela"></div>
+      </div>
+      <div id="temas"><!-- inicio tela temas -->
+        <p>Selecione um tema:</p>
+        <input type="radio" id="temas1" name="temas" value="tema1">
+        <label for="tema1">
+          <img src="img/tema1.png" class="miniatura-tema">
+        </label><br>
+
+        <input type="radio" id="temas2" name="temas" value="tema2">
+        <label for="css">
+          <img src="img/tema2.png" class="miniatura-tema">
+        </label><br>
+
+        <input type="radio" id="temas3" name="temas" value="tema3">
+        <label for="javascript">
+          <img src="img/tema3.png" class="miniatura-tema">
+        </label>
+        <br>
+
+        <button id="btn-aplicar" onclick="aplicaTema()">Aplicar</button>
+      </div><!-- fim tela temas -->
+    </div><!--- fim janela 1 --->
+
+    <div id="janela2"><!--- inicio janela 2 --->
+      <div id="topo-janela2">
+        <button id="btn-fechar" onclick="fechaJanela2()">X</button>
+        <div id="titulo-janela2"></div>
+      </div>
+      <!--inicio jogo forca-->
+      <div class="tela-inicial">
+        <h2>JOGO DA FORCA (HANGMAN)</h2>
+        <img src="img/hangman-inicio.png" width="200">
+        <p>
+          <h3>Digite uma letra e tente advinhar qual a palavra!<h3>
+        </p>
+        <button class="btn-comecar">COMEÇAR</button>
+      </div>
+
+      <div class="container">
+        <div class="mensagem"></div>
+        <div id="tracos"></div>
+        <h3>Digite uma letra:</h3>
+        <input type="text" id="letra" maxlength="1">
+        <div class="dica"></div>
+        <h3>Letras digitadas:</h3>
+        <div class="digitadas"></div>
+        
+        <div id="corpo">
+          <div class="poste">
+            <img src="img/poste.png">
+          </div>
+          
+          <div id="cabeca" style="display:none">
+            &#128543;
+          </div>
+
+          <div id="tronco" style="display:none">
+            <img src="./img/tronco.png">
+          </div>
+
+          <div id="bracoEsq" style="display:none">
+            <img src="./img/braco_esq.png">
+          </div>
+
+          <div id="bracoDir" style="display:none">
+            <img src="./img/braco_dir.png">
+          </div>
+
+          <div id="pernaEsq" style="display:none">
+            <img src="./img/perna_esq.png">
+          </div>
+
+          <div id="pernaDir" style="display:none">
+            <img src="./img/perna_dir.png">
+          </div>
+        </div>    
+      </div>
+
+      <div class="tela-final">
+        <h3 class="mensagem-final"></h3>
+        <p class="palavra"></p>
+        <p class="todas-digitadas"></p>
+        <button class="btn-recomecar">Jogar novamente</button>
+      </div><!-- fim jogo forca--> 
+    </div><!--- fim janela 2 --->
+
+    <div id="menu" style="display:none">
+      <ul>
+        <a href="foogle.html">
+          <li>
+            <img src="img/foogle.png" width="20px">
+            &nbsp;Foogle
+          </li>
+        </a>
+        <a href="dot-paint.html">
+          <li>
+            <img src="img/pincel.png" width="20px">
+            &nbsp;Dot paint
+          </li>
+        </a>
+        <li>
+          <img src="img/calculator.png" width="20px">
+          &nbsp;Calculadora
+        </li>
+        <li id="menu-terminal">
+          <img src="img/terminal.png" width="20px">
+          &nbsp;Terminal
+        </li>
+        <li onclick="iniciaTemas()">
+          <img src="img/config.png" width="20px">
+          &nbsp;Temas
+        </li>
+        <a href="desligar.html">
+          <li>
+            <img src="img/desligar.png" width="20px">
+            &nbsp;Desligar
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div> 
+  
+  <div id="toolbar">
+  	<button onclick="startMenu()" id="btn-start">Menu
+    </button>  	
+  	<div id="mid-bar">
+      <div id="btn-janela" style="display:none"></div>
+  	</div>
+  	<div id="hora"></div>
+    <div id="hoje"></div>
+  </div>
+
+  <div id="dataHoraCompleta" style="display: none;">
+    <div id="horaCompleta"></div>
+    <div id="diaSemana"></div>
+    <div id="diaGG"></div>
+    <div id="nomeMes"></div>
+    <div id="ano"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/forca.js"></script>
+</body>
+</html>

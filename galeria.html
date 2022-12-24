@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Galeria</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/galeria.css">
+</head>
+<body>
+  <div id="main">
+    <div id="col-1"><!-- inicio coluna 1-->
+    	<a href="corrida.html">
+        <div class="icone">
+          <img src="img/corrida.png">
+          corrida
+        </div>
+      </a>
+      <a href="calculadora.html">
+        <div class="icone">
+          <img src="img/calculator.png">
+          Calculadora
+        </div>
+      </a>
+      <a href="dot-paint.html">
+        <div class="icone">
+          <img src="img/pincel.png" width="80">
+          Dot paint
+        </div>
+      </a>
+      <a href="jogo-velha.html">
+        <div class="icone">
+          <img src="img/velha.png">
+          Jogo da velha
+        </div>
+      </a>
+      <a href="forca.html">
+        <div class="icone">
+          <img src="img/hangman-icon.png">
+          Jogo da forca
+        </div>
+      </a>
+    </div><!--fim coluna 1-->
+
+    <div id="col-2"><!-- inicio coluna 2-->
+      <a href="cronometro.html">
+        <div class="icone">
+          <img src="img/stopwatch.png">
+          Cronômentro
+        </div>
+      </a>
+      <div class="icone" onclick="mostraJanela2()">
+        <img src="img/icone-galeria.png">
+        Imagens
+      </div>
+      <a href="foogle.html">
+        <div class="icone">
+          <img src="img/Foogle.png">
+          Foogle
+        </div>
+      </a>
+      <a href="terminal.html">
+        <div class="icone">
+          <img src="img/terminal.png">
+          Terminal
+        </div>
+      </a>
+      <a href="fakebook.html">
+        <div class="icone"><!-- icone fakebook -->
+          <img src="img/fakebook.png">
+          Fakebook
+        </div>
+      </a>
+    </div><!--fim coluna 2-->
+
+    <div id="janela" style="display:none"><!--- inicio janela 1 --->
+      <div id="topo-janela">
+        <button id="btn-fechar" onclick="fechaJanela()">X</button>
+        <div id="titulo-janela"></div>
+      </div>
+      <div id="temas"><!-- inicio tela temas -->
+        <p>Selecione um tema:</p>
+        <input type="radio" id="temas1" name="temas" value="tema1">
+        <label for="tema1">
+          <img src="img/tema1.png" class="miniatura-tema">
+        </label><br>
+
+        <input type="radio" id="temas2" name="temas" value="tema2">
+        <label for="css">
+          <img src="img/tema2.png" class="miniatura-tema">
+        </label><br>
+
+        <input type="radio" id="temas3" name="temas" value="tema3">
+        <label for="javascript">
+          <img src="img/tema3.png" class="miniatura-tema">
+        </label>
+        <br>
+
+        <button id="btn-aplicar" onclick="aplicaTema()">Aplicar</button>
+      </div><!-- fim tela temas -->
+    </div><!--- fim janela 1 --->
+
+    <div id="janela2"><!--- inicio janela 2 --->
+      <div id="topo-janela2">
+        <button id="btn-fechar" onclick="fechaJanela2()">X</button>
+        <div id="titulo-janela2"></div>
+      </div>
+      <!-- conteudo janela 2 -->
+      <div class="container-galeria">
+
+        <div class="fotos fade">
+          <div class="numeros">1 / 4</div>
+          <img src="img/foto1.jpg" style="width:94.7%">
+          <div class="texto">Foto 1</div>
+        </div>
+
+        <div class="fotos fade">
+          <div class="numeros">2 / 4</div>
+          <img src="img/foto2.jpg" style="width:94.7%">
+          <div class="texto">Foto 2</div>
+        </div>
+
+        <div class="fotos fade">
+          <div class="numeros">3 / 4</div>
+          <img src="img/foto3.jpg" style="width:94.7%">
+          <div class="texto">Foto 3</div>
+        </div>
+
+        <div class="fotos fade">
+          <div class="numeros">4 / 4</div>
+          <img src="img/foto4.jpg" style="width:94.7%">
+          <div class="texto">Foto 4</div>
+        </div>
+
+        <a class="ant" onclick="mudaFotos(-1)">❮</a>
+        <a class="prox" onclick="mudaFotos(1)">❯</a>
+      </div>
+      <br>
+    </div><!--- fim janela 2 --->
+
+    <div id="menu" style="display:none">
+      <ul>
+        <a href="foogle.html">
+          <li>
+            <img src="img/foogle.png" width="20px">
+            &nbsp;Foogle
+          </li>
+        </a>
+        <li>
+          <img src="img/pincel.png" width="20px">
+          &nbsp;Fake paint
+        </li>
+        <li>
+          <img src="img/calculator.png" width="20px">
+          &nbsp;Calculadora
+        </li>
+        <li id="menu-terminal">
+          <img src="img/terminal.png" width="20px">
+          &nbsp;Terminal
+        </li>
+        <li onclick="iniciaTemas()">
+          <img src="img/config.png" width="20px">
+          &nbsp;Temas
+        </li>
+        <a href="desligar.html">
+          <li>
+            <img src="img/desligar.png" width="20px">
+            &nbsp;Desligar
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div> 
+  
+  <div id="toolbar">
+  	<button onclick="startMenu()" id="btn-start">Menu
+    </button>
+  	
+  	<div id="mid-bar">
+      <div id="btn-janela" style="display:none"></div>
+  	</div>
+
+  	<div id="hora"></div>
+    <div id="hoje"></div>
+  </div>
+
+  <div id="dataHoraCompleta" style="display: none;">
+    <div id="horaCompleta"></div>
+    <div id="diaSemana"></div>
+    <div id="diaGG"></div>
+    <div id="nomeMes"></div>
+    <div id="ano"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/galeria.js"></script>
+</body>
+</html>
