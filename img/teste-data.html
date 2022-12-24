@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>data e hora</title>
+</head>
+<body>
+  <div id="data"></div><br>
+  <hr>
+  <div id="tempo"></div>
+  
+  
+  <script>
+  	function mostraData() {
+      const hoje = new Date()
+      let dia = hoje.getDate()
+      let mes = hoje.getMonth() + 1
+      let ano = hoje.getFullYear()
+      if (mes < 10) {mes = '0' + mes}
+      document.write(dia + '/' + mes + '/' + ano)
+    }
+
+    function mostraHora() {
+      const intervalo = setInterval(() => {
+        const agora = new Date()
+        let horas = agora.getHours()
+        let minutos = agora.getMinutes()
+        document.write(horas + ':' + minutos)
+      }, 1000)
+    }
+
+    mostraData()
+  </script>
+</body>
+</html>
